@@ -6,5 +6,8 @@ function main() {
   const world = new World(container);
 
   world.render();
+
+  console.log(world.camera);
+  console.log(world.scene);
 }
 main();
