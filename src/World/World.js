@@ -15,8 +15,12 @@ class World {
     container.append(renderer.domElement);
 
     const cube = createCube();
+    const cube2 = createCube(2, 2, 2);
 
     scene.add(cube);
+    scene.add(cube2);
+
+    const resizer = new Resizer(container, camera, renderer);
   }
 
   render() {
