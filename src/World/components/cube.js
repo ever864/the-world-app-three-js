@@ -4,7 +4,7 @@ function createCube() {
   // Create a cube
   const geometry = new BoxGeometry(1, 1, 1);
   // Create a default (white) material
-  const material = new MeshBasicMaterial({ color: 0x00ff00 });
+  const material = new MeshBasicMaterial({ color: "white" });
   // Create a mesh using the geometry and material
   const cube = new Mesh(geometry, material);
 
