@@ -7,6 +7,8 @@ function main() {
 
   world.render();
 
+
+  console.log("test")
   console.log(world.camera);
   console.log(world.scene);
 }
