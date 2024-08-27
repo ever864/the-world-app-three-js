@@ -1,8 +1,12 @@
 {
   "dependencies": {
+    "server": "^1.0.39",
     "three": "^0.167.1"
   },
   "devDependencies": {
     "vite": "^5.4.0"
+  }
+  "scripts": {
+   "dev": "vite"
   }
 }
