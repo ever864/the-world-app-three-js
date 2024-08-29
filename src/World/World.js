@@ -14,8 +14,13 @@ class World {
     renderer = createRenderer();
     container.append(renderer.domElement);
 
-    const cube = createFigure("cube", 1, 4, 2, 1, 1, 3);
-    const sphere = createFigure("sphere", 1, 2, 2, 1, 2, 3);
+
+    camera.aspect = container.clientWidth / container.clientHeight;
+    renderer.setSize(container.clientWidth, container.clientHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
+
+    const cube = createFigure("cube", 2, 4, 2, 3, 0, 3);
+    const sphere = createFigure("sphere", 3, 2, 3, -3, 0, 3);
  
     scene.add(cube);
     scene.add(sphere);
