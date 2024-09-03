@@ -14,7 +14,7 @@ function createFigure(figure, width, height, depth, x, y, z) {
     return cube;
   } else if (figure === "sphere") {
     const geometry = new SphereGeometry(width, height, depth);
-    const material = new MeshStandardMaterial({ color: "blue" });
+    const material = new MeshStandardMaterial({ color: "red" });
     const sphere = new Mesh(geometry, material);
     sphere.position.set(x, y, z);
     return sphere;

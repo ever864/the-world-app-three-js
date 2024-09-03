@@ -1,7 +1,7 @@
 import { createCamera } from "./components/camera.js";
 import { createFigure } from "./components/figure.js";
 import { createScene } from "./components/scene.js";
-import { createLights } from "./components/lights.js";
+import { createLights, pointLight, spotLight, rectAreaLight } from "./components/lights.js";
 
 import { createRenderer } from "./systems/renderer.js";
 import { Resizer } from "./systems/Resizer.js";
@@ -23,8 +23,11 @@ class World {
     const cube = createFigure("cube", 2, 4, 2, 3, 0, 3);
     const sphere = createFigure("sphere", 3, 2, 3, -3, 0, 3);
     const light = createLights();
+    const pLight = pointLight();
+    const sLight = spotLight();
+    const rLight = rectAreaLight();
 
-    scene.add(cube, light);
+    scene.add(cube, light, pLight, sLight, rLight);
     scene.add(sphere);
 
     const resizer = new Resizer(container, camera, renderer);
